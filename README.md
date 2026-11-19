@@ -1,5 +1,9 @@
 # LOWTIDE — Port Solmar floods twice a day
 
+[![make.fun · gta6-01](https://make.fun/badge/gta6-01.svg)](https://make.fun/bounty/gta6-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+[![rank](https://make.fun/badge/gta6-01/jmjuve/gta6-01/rank.svg)](https://make.fun/bounty/gta6-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+[![reward](https://make.fun/badge/gta6-01/jmjuve/gta6-01/reward.svg)](https://make.fun/bounty/gta6-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+
 **Port Solmar floods twice a day — and the whole game changes with the water: streets become rivers, cruisers become boats, and the best getaway in the city is the tide itself.**
 
 You are **Rae Calloway**, a getaway driver who swore off the life — until her brother's debt to the fixer **Marlowe Voss** pulls her back for one last score. Steal cars, outrun the PSPD on streets that become rivers, and pull the Golden Hour heist as the highest tide of the year drowns the Boulevard.
