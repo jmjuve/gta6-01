@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LOWTIDE — Port Solmar</title>
+<link rel="stylesheet" href="./style.css">
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.min.js" } }
+</script>
+</head>
+<body>
+<div id="app"></div>
+
+<!-- HUD -->
+<div id="hud">
+  <div id="topleft">
+    <div id="stars">☆☆☆☆☆</div>
+    <div id="healthrow"><span>♥ <span id="health">100</span></span><div id="healthbar-wrap"><div id="healthbar"></div></div></div>
+    <div id="cash">$150</div>
+    <div id="speed">ON FOOT</div>
+  </div>
+  <div id="topcenter">
+    <div id="job">Free roam — press J for the job board</div>
+    <div id="dispatch"></div>
+  </div>
+  <div id="topright">
+    <canvas id="minimap" width="168" height="168"></canvas>
+    <div id="tidewrap">
+      <div id="tidebar"><div id="tidefill"></div></div>
+      <div id="tidetext">TIDE 0%</div>
+    </div>
+  </div>
+  <div id="toast"></div>
+  <div id="hint"></div>
+  <div id="controls">WASD drive/walk · Space brake · Shift boost · E enter/steal · F car/boat swap · Click shoot · J jobs · H horn · M mute · Esc pause</div>
+</div>
+
+<!-- Title screen -->
+<div id="title" class="overlay">
+  <div class="panel">
+    <h1>LOWTIDE</h1>
+    <p class="tag">Port Solmar floods twice a day — and the whole game changes with the water.</p>
+    <p class="sub">Port Solmar, 6:47 PM. You are Rae Calloway, getaway driver. Your brother owes Marlowe Voss — and the tide is coming in.</p>
+    <p class="sub">Steal cars. Outrun the PSPD on streets that become rivers. Pull the Golden Hour heist as the highest tide of the year drowns the Boulevard.</p>
+    <button id="start-btn">NEW GAME — Press ENTER</button>
+    <button id="continue-btn">CONTINUE</button>
+    <p class="dim">WASD drive / walk · E enter or steal a vehicle · F swap car/boat at the water · J job board · Click to shoot on foot</p>
+    <p class="dim">An original game. No Rockstar names, characters, maps or music. All art, sound and story made for this game.</p>
+  </div>
+</div>
+
+<!-- Pause -->
+<div id="pause" class="overlay" style="display:none">
+  <div class="panel">
+    <h1>PAUSED</h1>
+    <p class="sub">The tide waits. Port Solmar does not.</p>
+    <button id="resume-btn">RESUME</button>
+    <button id="quit-btn">SAVE &amp; TITLE</button>
+  </div>
+</div>
+
+<!-- Busted -->
+<div id="busted" class="overlay" style="display:none">
+  <div class="panel">
+    <h1>BUSTED</h1>
+    <p class="sub" id="busted-text"></p>
+    <button id="busted-btn">WAKE UP AT THE SAFEHOUSE</button>
+  </div>
+</div>
+
+<!-- Job board + shop -->
+<div id="board" class="overlay" style="display:none">
+  <div class="panel wide">
+    <div id="board-body"></div>
+    <button id="board-close">CLOSE (J)</button>
+  </div>
+</div>
+
+<script>
+  document.getElementById('board-close').addEventListener('click', () => {
+    document.getElementById('board').style.display = 'none';
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Enter' && document.getElementById('title').style.display !== 'none') {
+      document.getElementById('start-btn').click();
+    }
+  });
+</script>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

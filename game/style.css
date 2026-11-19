@@ -1,0 +1,40 @@
+/* LOWTIDE — style.css. Dusk teal + sodium orange + neon magenta/cyan. */
+html, body { margin: 0; height: 100%; overflow: hidden; background: #14101c; font-family: 'Segoe UI', Arial, sans-serif; color: #f2ede4; }
+#app, #app canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+#hud { position: fixed; inset: 0; pointer-events: none; z-index: 5; }
+#topleft { position: absolute; top: 14px; left: 16px; text-shadow: 0 2px 6px #000; }
+#stars { font-size: 26px; letter-spacing: 4px; color: #ffd27a; }
+#healthrow { margin-top: 6px; font-size: 15px; font-weight: 700; }
+#healthbar-wrap { display: inline-block; width: 130px; height: 10px; background: rgba(0,0,0,.55); border: 1px solid rgba(255,255,255,.35); vertical-align: middle; margin-left: 6px; }
+#healthbar { height: 100%; width: 100%; background: #7de3a8; }
+#cash { font-size: 26px; font-weight: 800; color: #7de3a8; margin-top: 4px; }
+#speed { font-size: 14px; color: #ffd27a; font-weight: 700; margin-top: 2px; }
+#topcenter { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); text-align: center; width: 46%; }
+#job { background: rgba(10,10,18,.72); border: 1px solid rgba(255,210,122,.5); border-radius: 6px; padding: 8px 12px; font-size: 15px; font-weight: 600; }
+#dispatch { margin-top: 6px; font-size: 13px; color: #9adfff; font-style: italic; text-shadow: 0 1px 4px #000; }
+#topright { position: absolute; top: 14px; right: 16px; text-align: right; }
+#minimap { border: 2px solid rgba(255,255,255,.45); border-radius: 6px; background: #1d2433; box-shadow: 0 4px 18px rgba(0,0,0,.6); }
+#tidewrap { margin-top: 6px; width: 168px; }
+#tidebar { height: 12px; background: rgba(0,0,0,.6); border: 1px solid rgba(25,194,216,.7); border-radius: 6px; overflow: hidden; }
+#tidefill { height: 100%; width: 0%; background: #2a6a7a; transition: width .3s; }
+#tidetext { font-size: 11px; font-weight: 700; color: #9adfff; margin-top: 3px; text-shadow: 0 1px 4px #000; }
+#toast { position: absolute; bottom: 96px; left: 50%; transform: translateX(-50%); background: rgba(10,10,18,.85); border: 1px solid #ffd27a; border-radius: 6px; padding: 10px 16px; font-size: 15px; max-width: 640px; text-align: center; opacity: 0; transition: opacity .3s; }
+#hint { position: absolute; bottom: 56px; left: 50%; transform: translateX(-50%); font-size: 13px; color: #e8e8e8; text-shadow: 0 1px 4px #000; opacity: 0; transition: opacity .3s; text-align: center; }
+#controls { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); font-size: 11px; color: rgba(255,255,255,.55); text-shadow: 0 1px 3px #000; white-space: nowrap; }
+.overlay { position: fixed; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center; background: rgba(8,6,16,.72); }
+.panel { background: linear-gradient(160deg, #241a33, #12242e); border: 2px solid #ff2d78; border-radius: 12px; padding: 28px 34px; max-width: 620px; text-align: center; box-shadow: 0 12px 50px rgba(0,0,0,.8); }
+.panel.wide { max-width: 760px; text-align: left; max-height: 86vh; overflow-y: auto; }
+.panel h1 { font-size: 52px; margin: 0; letter-spacing: 6px; color: #19c2d8; text-shadow: 0 0 24px #19c2d8, 0 0 6px #ff2d78; }
+.panel h2 { color: #ffd27a; margin: 4px 0 10px; }
+.panel h3 { color: #19c2d8; margin: 16px 0 6px; }
+.panel .tag { font-size: 18px; font-weight: 700; color: #ffd27a; }
+.panel .sub { font-size: 15px; line-height: 1.5; color: #e8e2d4; }
+.panel .dim { font-size: 12px; color: rgba(255,255,255,.55); }
+.panel button { pointer-events: auto; cursor: pointer; background: #ff2d78; color: #fff; border: none; border-radius: 8px; padding: 12px 22px; font-size: 16px; font-weight: 800; margin: 8px 6px 0; box-shadow: 0 4px 18px rgba(255,45,120,.5); }
+.panel button:hover { background: #ff4d8d; }
+.board-row { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 6px; padding: 8px 10px; margin: 6px 0; font-size: 14px; line-height: 1.45; }
+.board-row button { padding: 6px 12px; font-size: 13px; margin: 4px 0 0; }
+.owned { color: #7de3a8; font-weight: 700; }
+#board { justify-content: flex-start; padding-left: 48px; background: rgba(8,6,16,.45); }
+#board .panel.wide { max-width: 560px; max-height: 88vh; }
+#board-close { display: block; margin: 14px auto 0; }
